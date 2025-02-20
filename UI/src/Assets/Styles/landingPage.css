@@ -1,0 +1,118 @@
+.mainScreen {
+    /* font-family: Asap, 'Source Sans Pro',_fb_; */
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../Images/mainBackground.jpg');
+    background-size: cover;
+}
+.mainScreen container {
+    width: 100%;
+    
+}
+.logo {
+    animation: rotation infinite 3s linear;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: block;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.mainScreen h1 {
+    font-weight: 700;
+    font-size: 8.5em;
+    color: rgba(15, 51, 98, 1);
+    margin-bottom: 10px;
+    opacity: 0; /* Make sure the text is hidden initially */
+    animation: fadeIn 2s ease-out forwards; /* Apply the animation */
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translatex(-60px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translatex(0); /* End at the original position */
+    }
+}
+.mainScreen p {
+    font-size: 1.4em;
+    color: rgba(15, 51, 98, 1);
+    margin-bottom: 30px;
+}
+.mainScreen .start-btn {
+    background-color: rgba(228, 81, 21, 1);
+    color: white;
+    padding: 13px 85px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4em;
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform 0.5s ease;  
+}
+.start-btn:hover {
+    transform: scale(0.9);
+}
+
+
+
+.result-info-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .result-info {
+    display: flex;
+    justify-content: center;
+    /* width: 50%; */
+    width: 30%;
+    background-color: white;
+    border-radius: 15px;
+    opacity: 1.1;
+    border: #00e7ff;
+    border-width: 21px;
+    border-style: ridge;
+    border-width: medium;
+  }
+  .result-info-container .correct,
+  .result-info-container .incorrect {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    display: block;
+  }
+  .result-info-container .correct {
+    color: #4caf50; /* Green */
+    padding: 20px;
+  }
+  .result-info-container .incorrect {
+    color: #f44336; /* Red */
+    padding: 20px;
+  }
+  .result-info-container .icon {
+    margin-right: 5px;
+    font-size: 18px;
+  }
+  
